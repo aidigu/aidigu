@@ -2,6 +2,7 @@
 namespace app\wechat\libs\officialAccount;
 
 use EasyWeChat\Factory;
+use app\common\model\User as UserModel;
 
 class User
 {
