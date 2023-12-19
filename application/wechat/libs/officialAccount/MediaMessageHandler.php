@@ -50,9 +50,9 @@ class MediaMessageHandler implements EventHandlerInterface
         $message = json_decode(json_encode($message), true);
         $event = $message['Event'];
         $openId = $message['FromUserName'];
-        $userInfo = User::info($openId);
+        // $userInfo = User::info($openId);
         // // 检查用户并登录
-        User::checkUser(json_decode(json_encode($userInfo), true), $message['EventKey']);
-        return '欢迎关注爱嘀咕~';
+        // User::checkUser(json_decode(json_encode($userInfo), true), $message['EventKey']);
+        return '欢迎关注爱嘀咕~' . $event;
     }
 }
